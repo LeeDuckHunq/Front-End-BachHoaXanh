@@ -15,6 +15,8 @@ body {
     --tw-bg-opacity: 1;
     background-color: rgb(0 126 66 / var(--tw-bg-opacity));
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 .navbar-outline {
@@ -115,11 +117,13 @@ body {
 .main .main-inline {
     width: 1200px;
     display: flex;
+    gap: 10px;
     justify-content: space-between;
 }
 
 .main .main-inline .menu {
     width: 230px;
+    top: 115.5px;
     position: sticky;
     height: calc(99.5vh - 114px);
     overflow: auto;
@@ -173,5 +177,124 @@ body {
     color: black;
     background-color: white;
     border: none;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   
+.accordion-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion-body a {
+    text-decoration: none;
+    color: #747070;
+}
+
+.product {
+    flex: 1;
+}
+
+.product .flashsale {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    background-color: white;
+    padding: 10px;
+    width: 960px; 
+    scroll-behavior: smooth;
+}
+
+.product .flashsale::-webkit-scrollbar {
+    height: 8px;
+    display: none;
+}
+
+.product .flashsale::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.product .flashsale .item img {
+    width: 60px;
+    height: 60px;
+}
+
+.product .flashsale .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    gap: 10px;
+}
+
+.product .mainproduct {
+    display: flex;
+    flex-direction: column;
+    width: 960px;
+    background: linear-gradient(to bottom, #fff6dc, #ff7c01c2);
+    align-items: center;
+
+}
+
+.product .mainproduct .essential h2 {
+    color: orange;
+    font-size: 18px;
+}
+
+.product .mainproduct .essential {
+    padding: 10px;
+    width: 960px;
+}
+
+.essential .slide {
+    overflow: auto;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+.essential .slide::-webkit-scrollbar {
+    height: 8px;
+    display: none;
+}
+
+.essential .group_item {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: calc(25% - 15px);
+    gap: 15px;
+    width: max-content;
+}
+
+.essential .group_item .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.essential .group_item .item img {
+    width: 192px;
+    height: 192px;
+}
+
+.essential .group_item .item p {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: red;
+}
+
+.essential .group_item .item button {
+    border: none;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    padding: 5px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+}
